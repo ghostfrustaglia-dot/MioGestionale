@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container">
+        <a class="navbar-brand" href="/">Gestionale Pro</a>
+        <div class="navbar-nav">
+            <a class="nav-link active" href="/">Dashboard</a>
+            <a class="nav-link" href="/clienti">Clienti</a>
+            <a class="nav-link" href="/magazzino">Magazzino</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container text-center">
+    <h1 class="mb-5">Benvenuto nel tuo Gestionale</h1>
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card p-4 shadow-sm border-primary">
+                <h3>Clienti Totali</h3>
+                <p class="display-4" th:text="${totaleClienti}">0</p>
+                <a href="/clienti" class="btn btn-primary">Vai ai Clienti</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card p-4 shadow-sm border-success">
+                <h3>Prodotti in Magazzino</h3>
+                <p class="display-4" th:text="${totaleProdotti}">0</p>
+                <a href="/magazzino" class="btn btn-success">Vai al Magazzino</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
